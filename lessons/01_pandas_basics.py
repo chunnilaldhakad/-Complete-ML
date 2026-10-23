@@ -7,3 +7,6 @@ data = {
 
 students = pd.DataFrame(data)
 print(students.head())
+
+# Shape gives the number of rows and columns.
+print("Rows and columns:", students.shape)
