@@ -13,3 +13,7 @@ print("Rows and columns:", students.shape)
 
 # Convert the column index into a plain Python list.
 print("Column names:", students.columns.tolist())
+
+# Inspect the data type stored in each column.
+print("Column data types:")
+print(students.dtypes)
