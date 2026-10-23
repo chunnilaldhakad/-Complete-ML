@@ -10,3 +10,6 @@ print(students.head())
 
 # Shape gives the number of rows and columns.
 print("Rows and columns:", students.shape)
+
+# Convert the column index into a plain Python list.
+print("Column names:", students.columns.tolist())
