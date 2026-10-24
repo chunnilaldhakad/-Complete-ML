@@ -20,6 +20,8 @@ python lessons/01_pandas_basics.py
 
 7. Select a column as a pandas Series with `students["score"]`.
 
+8. Filter rows using `.loc[...]` and a Boolean condition.
+
 The three rows are synthetic practice data, not evidence of real-world predictive accuracy.
 
-Next: filter rows by condition, then sort them.
+Next: sort rows by a numeric column.

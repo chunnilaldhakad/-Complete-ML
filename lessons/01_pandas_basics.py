@@ -20,3 +20,6 @@ print(students.dtypes)
 
 # Select a single column as a pandas Series.
 print("Scores:\n", students["score"])
+
+# Keep students scoring at least 60.
+print("Passing scores:\n", students.loc[students["score"] >= 60])
