@@ -23,3 +23,6 @@ print("Scores:\n", students["score"])
 
 # Keep students scoring at least 60.
 print("Passing scores:\n", students.loc[students["score"] >= 60])
+
+# Sort rows by score, highest first.
+print("Highest scores first:\n", students.sort_values("score", ascending=False))

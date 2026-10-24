@@ -22,6 +22,8 @@ python lessons/01_pandas_basics.py
 
 8. Filter rows using `.loc[...]` and a Boolean condition.
 
+9. Sort rows by score with `.sort_values("score", ascending=False)`.
+
 The three rows are synthetic practice data, not evidence of real-world predictive accuracy.
 
-Next: sort rows by a numeric column.
+Next: practice missing values and duplicate-row cleanup.
