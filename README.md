@@ -18,6 +18,8 @@ python lessons/01_pandas_basics.py
 5. Retrieve column names as a Python list with `.columns.tolist()`.
 6. Inspect the type of data in each column with `.dtypes`.
 
+7. Select a column as a pandas Series with `students["score"]`.
+
 The three rows are synthetic practice data, not evidence of real-world predictive accuracy.
 
-Next: select columns, filter rows, and sort values.
+Next: filter rows by condition, then sort them.

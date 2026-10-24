@@ -17,3 +17,6 @@ print("Column names:", students.columns.tolist())
 # Inspect the data type stored in each column.
 print("Column data types:")
 print(students.dtypes)
+
+# Select a single column as a pandas Series.
+print("Scores:\n", students["score"])
