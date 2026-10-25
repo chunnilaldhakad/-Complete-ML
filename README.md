@@ -32,4 +32,6 @@ Run `python lessons/02_data_cleaning.py` after installing dependencies.
 
 10. Create practice rows with missing scores and one duplicate row.
 
-Next: count missing values in each column.
+11. Count missing entries per column with `raw.isna().sum()`.
+
+Next: fill missing scores using the median.
