@@ -7,3 +7,8 @@ raw = pd.DataFrame({
 
 # Count missing entries in each column.
 print("Missing values per column:\n", raw.isna().sum())
+
+# Fill missing scores with the observed median; keep raw unchanged.
+cleaned = raw.copy()
+cleaned["score"] = cleaned["score"].fillna(cleaned["score"].median())
+print("Scores after filling:\n", cleaned)

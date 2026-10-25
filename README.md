@@ -34,4 +34,6 @@ Run `python lessons/02_data_cleaning.py` after installing dependencies.
 
 11. Count missing entries per column with `raw.isna().sum()`.
 
-Next: fill missing scores using the median.
+12. Use `fillna()` with the observed median while preserving the raw data.
+
+Next: detect and remove duplicate rows.
