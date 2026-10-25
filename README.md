@@ -26,4 +26,10 @@ python lessons/01_pandas_basics.py
 
 The three rows are synthetic practice data, not evidence of real-world predictive accuracy.
 
-Next: practice missing values and duplicate-row cleanup.
+## Lesson 2: data cleaning
+
+Run `python lessons/02_data_cleaning.py` after installing dependencies.
+
+10. Create practice rows with missing scores and one duplicate row.
+
+Next: count missing values in each column.
