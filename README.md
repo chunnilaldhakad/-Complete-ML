@@ -36,4 +36,6 @@ Run `python lessons/02_data_cleaning.py` after installing dependencies.
 
 12. Use `fillna()` with the observed median while preserving the raw data.
 
-Next: detect and remove duplicate rows.
+13. Identify repeated rows using `raw.duplicated()` and count them.
+
+Next: remove the duplicates.

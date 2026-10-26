@@ -12,3 +12,8 @@ print("Missing values per column:\n", raw.isna().sum())
 cleaned = raw.copy()
 cleaned["score"] = cleaned["score"].fillna(cleaned["score"].median())
 print("Scores after filling:\n", cleaned)
+
+# Find repeated rows in the original dataset.
+duplicate_rows = raw.duplicated()
+print("Duplicate flags:\n", duplicate_rows)
+print("Duplicate count:", duplicate_rows.sum())
