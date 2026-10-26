@@ -17,3 +17,7 @@ print("Scores after filling:\n", cleaned)
 duplicate_rows = raw.duplicated()
 print("Duplicate flags:\n", duplicate_rows)
 print("Duplicate count:", duplicate_rows.sum())
+
+# Keep one copy of each row and renumber the index.
+unique_rows = cleaned.drop_duplicates().reset_index(drop=True)
+print("After removing duplicates:\n", unique_rows)

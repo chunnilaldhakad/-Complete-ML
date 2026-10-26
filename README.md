@@ -38,4 +38,6 @@ Run `python lessons/02_data_cleaning.py` after installing dependencies.
 
 13. Identify repeated rows using `raw.duplicated()` and count them.
 
-Next: remove the duplicates.
+14. Keep only one copy of each row with `.drop_duplicates()`.
+
+Next: validate the cleaned rows.
