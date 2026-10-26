@@ -40,4 +40,6 @@ Run `python lessons/02_data_cleaning.py` after installing dependencies.
 
 14. Keep only one copy of each row with `.drop_duplicates()`.
 
-Next: validate the cleaned rows.
+15. Assert that cleaned rows contain no missing values or duplicates.
+
+Next: grouping records and saving/loading CSV datasets.

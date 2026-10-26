@@ -21,3 +21,8 @@ print("Duplicate count:", duplicate_rows.sum())
 # Keep one copy of each row and renumber the index.
 unique_rows = cleaned.drop_duplicates().reset_index(drop=True)
 print("After removing duplicates:\n", unique_rows)
+
+# Confirm both cleaning steps worked.
+assert not unique_rows.isna().any().any(), "Missing values remain"
+assert not unique_rows.duplicated().any(), "Duplicate rows remain"
+print("Final cleaned row count:", len(unique_rows))
