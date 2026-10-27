@@ -42,4 +42,13 @@ Run `python lessons/02_data_cleaning.py` after installing dependencies.
 
 15. Assert that cleaned rows contain no missing values or duplicates.
 
-Next: grouping records and saving/loading CSV datasets.
+## Lesson 3: grouping and CSV
+
+Run `python lessons/03_grouping_csv.py` after installing dependencies.
+
+16. Count records in each section with `groupby("section").size()`.
+17. Calculate average scores per section with `groupby("section")["score"].mean()`.
+18. Export to CSV without an index and read it back with `pd.read_csv()`.
+   A temporary directory prevents leftover data files.
+
+Next: NumPy arrays and numerical operations.
