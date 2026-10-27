@@ -6,3 +6,5 @@ records = pd.DataFrame({
 })
 
 print("Students per section:\n", records.groupby("section").size())
+
+print("Average score per section:\n", records.groupby("section")["score"].mean())
