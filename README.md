@@ -51,4 +51,12 @@ Run `python lessons/03_grouping_csv.py` after installing dependencies.
 18. Export to CSV without an index and read it back with `pd.read_csv()`.
    A temporary directory prevents leftover data files.
 
-Next: NumPy arrays and numerical operations.
+## Lesson 4: NumPy basics
+
+Run `python lessons/04_numpy_basics.py` after installing dependencies.
+
+19. Build and print a one-dimensional array using `np.array()`.
+20. Inspect its shape and number of dimensions with `.shape` and `.ndim`.
+21. Multiply all array values by two using vectorized arithmetic.
+
+Next: more NumPy elementwise operations and summary statistics.
