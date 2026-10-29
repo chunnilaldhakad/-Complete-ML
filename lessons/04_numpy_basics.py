@@ -21,3 +21,11 @@ first = numbers[0]
 middle = numbers[1:3]
 print("First and middle:", first, middle)
 assert first == 2 and np.array_equal(middle, [4, 6])
+
+# NumPy's default standard deviation uses the population formula.
+mean_score = np.mean(numbers)
+median_score = np.median(numbers)
+std_score = np.std(numbers)
+print("Mean, median, std:", mean_score, median_score, std_score)
+assert np.isclose(mean_score, 5) and np.isclose(median_score, 5)
+assert np.isclose(std_score, np.sqrt(5))

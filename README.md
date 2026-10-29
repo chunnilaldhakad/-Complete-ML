@@ -59,4 +59,8 @@ Run `python lessons/04_numpy_basics.py` after installing dependencies.
 20. Inspect its shape and number of dimensions with `.shape` and `.ndim`.
 21. Multiply all array values by two using vectorized arithmetic.
 
-Next: more NumPy elementwise operations and summary statistics.
+22. Add a scalar to each element using vectorized `numbers + 1`.
+23. Use zero-based indexing `numbers[0]` and exclusive-end slices `numbers[1:3]`.
+24. Compute mean, median, and population standard deviation with NumPy.
+
+Next: two-dimensional arrays, axis calculations, and basic NumPy statistics.
