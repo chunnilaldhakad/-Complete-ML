@@ -10,3 +10,8 @@ print("Dimensions:", numbers.ndim)
 doubled = numbers * 2
 print("Doubled values:", doubled)
 assert np.array_equal(doubled, [4, 8, 12, 16])
+
+# Add one to every number without a Python loop.
+incremented = numbers + 1
+print("Incremented values:", incremented)
+assert np.array_equal(incremented, [3, 5, 7, 9])
