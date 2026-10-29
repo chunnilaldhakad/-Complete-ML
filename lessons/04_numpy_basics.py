@@ -15,3 +15,9 @@ assert np.array_equal(doubled, [4, 8, 12, 16])
 incremented = numbers + 1
 print("Incremented values:", incremented)
 assert np.array_equal(incremented, [3, 5, 7, 9])
+
+# Index starts at zero; slicing excludes the stop index.
+first = numbers[0]
+middle = numbers[1:3]
+print("First and middle:", first, middle)
+assert first == 2 and np.array_equal(middle, [4, 6])
