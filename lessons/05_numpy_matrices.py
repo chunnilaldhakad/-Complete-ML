@@ -12,3 +12,9 @@ print("Column totals:", column_totals)
 print("Row totals:", row_totals)
 assert np.array_equal(column_totals, [5, 7, 9])
 assert np.array_equal(row_totals, [6, 15])
+
+# NumPy broadcasts three offsets across both rows.
+offsets = np.array([10, 20, 30])
+adjusted = grid + offsets
+print("Broadcast result:\n", adjusted)
+assert np.array_equal(adjusted, [[11, 22, 33], [14, 25, 36]])

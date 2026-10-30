@@ -63,4 +63,12 @@ Run `python lessons/04_numpy_basics.py` after installing dependencies.
 23. Use zero-based indexing `numbers[0]` and exclusive-end slices `numbers[1:3]`.
 24. Compute mean, median, and population standard deviation with NumPy.
 
-Next: two-dimensional arrays, axis calculations, and basic NumPy statistics.
+## Lesson 5: NumPy matrices and broadcasting
+
+Run `python lessons/05_numpy_matrices.py` after installing dependencies.
+
+25. Create a two-dimensional NumPy array and inspect its (rows, columns) shape.
+26. Sum columns with `axis=0` and rows with `axis=1`.
+27. Broadcast a one-dimensional array of offsets across each matrix row.
+
+Next: NumPy elementwise comparisons and boolean masks.
