@@ -71,4 +71,12 @@ Run `python lessons/05_numpy_matrices.py` after installing dependencies.
 26. Sum columns with `axis=0` and rows with `axis=1`.
 27. Broadcast a one-dimensional array of offsets across each matrix row.
 
-Next: NumPy elementwise comparisons and boolean masks.
+## Lesson 6: NumPy comparisons and Boolean masks
+
+Run `python lessons/06_numpy_masks.py` after installing dependencies.
+
+28. Compare each score with a threshold to create a Boolean mask.
+29. Use the mask to select only passing scores.
+30. Use `np.where()` to label each score as pass or retry.
+
+Next: visualizing numerical data with Matplotlib.

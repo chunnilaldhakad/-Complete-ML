@@ -8,3 +8,7 @@ assert np.array_equal(passing, [False, True, True, True])
 passed_scores = scores[passing]
 print("Passed scores:", passed_scores)
 assert np.array_equal(passed_scores, [60, 75, 90])
+
+labels = np.where(passing, "pass", "retry")
+print("Result labels:", labels)
+assert np.array_equal(labels, ["retry", "pass", "pass", "pass"])
