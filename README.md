@@ -79,4 +79,13 @@ Run `python lessons/06_numpy_masks.py` after installing dependencies.
 29. Use the mask to select only passing scores.
 30. Use `np.where()` to label each score as pass or retry.
 
-Next: visualizing numerical data with Matplotlib.
+## Lesson 7: Matplotlib line plot
+
+Run `python lessons/07_matplotlib_basics.py` after installing dependencies.
+
+31. Plot synthetic study hours against exam scores with `ax.plot()`.
+32. Label the horizontal and vertical axes using Matplotlib.
+33. Add a title and save the chart to `plots/study_scores.png`.
+    The generated `plots/` directory is ignored by Git.
+
+Next: Matplotlib scatter charts, legends, and exploratory visuals.
