@@ -88,4 +88,15 @@ Run `python lessons/07_matplotlib_basics.py` after installing dependencies.
 33. Add a title and save the chart to `plots/study_scores.png`.
     The generated `plots/` directory is ignored by Git.
 
-Next: Matplotlib scatter charts, legends, and exploratory visuals.
+## Lesson 8: Matplotlib scatter plot and EDA
+
+Run `python lessons/08_scatter_eda.py` after installing dependencies.
+
+34. Plot five synthetic study-hour and score pairs with `ax.scatter()`.
+35. Label the points and display a legend using `ax.legend()`.
+36. Calculate Pearson correlation with `np.corrcoef()` as a descriptive EDA check.
+
+A labeled scatter chart is saved to `plots/study_scatter.png` (ignored by Git).
+This tiny synthetic correlation is not evidence of predictive accuracy or generalization.
+
+Next: Seaborn distributions and deeper exploratory analysis.
