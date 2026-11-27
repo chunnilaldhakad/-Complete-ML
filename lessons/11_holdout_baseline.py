@@ -16,3 +16,7 @@ assert set(train_ids).isdisjoint(test_ids)
 train = [records[i] for i in train_ids]
 test = [records[i] for i in test_ids]
 print("Train/test sizes:", len(train), len(test))
+
+baseline = mean(score for _, score in train)
+predictions = [baseline for _ in test]
+print("Held-out baseline predictions:", predictions)
