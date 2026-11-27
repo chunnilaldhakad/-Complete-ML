@@ -10,3 +10,7 @@ print("Signed prediction errors:", errors)
 bias = mean(errors)
 assert bias == 1
 print("Mean overprediction in score points:", bias)
+
+mae = mean(abs(e) for e in errors)
+assert mae == 3
+print("MAE in score points:", mae)
