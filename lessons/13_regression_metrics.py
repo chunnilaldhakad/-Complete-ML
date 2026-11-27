@@ -18,3 +18,7 @@ print("MAE in score points:", mae)
 mse = mean(e ** 2 for e in errors)
 assert mse == 14
 print("MSE in squared score points:", mse)
+
+rmse = sqrt(mse)
+assert rmse >= mae
+print("RMSE in score points:", round(rmse, 2))
