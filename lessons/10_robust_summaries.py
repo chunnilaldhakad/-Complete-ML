@@ -15,3 +15,9 @@ print("Middle half spans", iqr, "points")
 lower, upper = q1 - 1.5 * iqr, q3 + 1.5 * iqr
 new_score = 15
 print("Outside reference fences:", new_score < lower or new_score > upper)
+
+extended = scores + [new_score]
+mean_shift = abs(mean(extended) - mean(scores))
+median_shift = abs(median(extended) - median(scores))
+assert median_shift < mean_shift
+print("Absolute shifts in mean and median:", mean_shift, median_shift)
