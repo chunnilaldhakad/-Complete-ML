@@ -22,3 +22,8 @@ for fold in folds:
         predictions[i] = prediction
 assert set(predictions) == set(indices)
 print("Out-of-fold predictions in row order:", [predictions[i] for i in range(len(scores))])
+
+fold_maes = [mean(abs(scores[i] - predictions[i]) for i in fold) for fold in folds]
+pooled_mae = mean(abs(scores[i] - predictions[i]) for i in indices)
+print("MAE by fold:", fold_maes)
+print("Pooled MAE across held-out rows:", pooled_mae)
