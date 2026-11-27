@@ -21,3 +21,8 @@ print("Score points per additional hour:", slope)
 intercept = y_mean - slope * x_mean
 assert isclose(intercept + slope * x_mean, y_mean)
 print("Fitted intercept:", intercept)
+
+def predict(x):
+    return intercept + slope * x
+
+print("Predicted score at 3.5 hours:", predict(3.5))
