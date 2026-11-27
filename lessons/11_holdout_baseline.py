@@ -20,3 +20,6 @@ print("Train/test sizes:", len(train), len(test))
 baseline = mean(score for _, score in train)
 predictions = [baseline for _ in test]
 print("Held-out baseline predictions:", predictions)
+
+errors = [abs(score - pred) for (_, score), pred in zip(test, predictions, strict=True)]
+print("Baseline holdout MAE in score points:", mean(errors))
