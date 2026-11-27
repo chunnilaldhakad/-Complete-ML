@@ -99,4 +99,20 @@ Run `python lessons/08_scatter_eda.py` after installing dependencies.
 A labeled scatter chart is saved to `plots/study_scatter.png` (ignored by Git).
 This tiny synthetic correlation is not evidence of predictive accuracy or generalization.
 
-Next: Seaborn distributions and deeper exploratory analysis.
+## Lessons 9–14: from distributions to model evaluation
+
+Run each example from the repository root with `python lessons/<filename>`.
+
+| Steps | Filename | What to look for |
+| --- | --- | --- |
+| 37–42 | `09_score_distributions.py` | Compare two histogram bin widths and read the fraction scoring at most 70 from an ECDF. Charts are saved in `plots/`. |
+| 43–47 | `10_robust_summaries.py` | Compare changes in mean and median after adding one low score. |
+| 48–52 | `11_holdout_baseline.py` | Fit a constant on training labels and score it on held-out rows. |
+| 53–58 | `12_fit_a_line.py` | Derive the slope and intercept, then inspect the training residuals. |
+| 59–64 | `13_regression_metrics.py` | Compare bias, MAE, MSE, RMSE and R squared on the same predictions. |
+| 65–68 | `14_cross_validation.py` | Refit a baseline per fold and pool out-of-fold absolute errors. |
+
+**Practice (step 69).** Change the largest prediction in lesson 13 from 86 to 92. Predict how MAE and RMSE will change, then update the expected metric values and run the example. Why does squaring an error make a large miss more influential?
+
+Next: evaluate a fitted linear model and a constant baseline on the same folds.
+
