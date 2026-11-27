@@ -26,3 +26,7 @@ def predict(x):
     return intercept + slope * x
 
 print("Predicted score at 3.5 hours:", predict(3.5))
+
+residuals = [y - predict(x) for x, y in zip(hours, scores, strict=True)]
+assert isclose(sum(residuals), 0, abs_tol=1e-10)
+print("Training residuals (observed minus predicted):", residuals)
