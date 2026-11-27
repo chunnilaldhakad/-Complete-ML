@@ -11,3 +11,7 @@ print("Quartiles:", q1, q2, q3)
 iqr = q3 - q1
 assert iqr == 15
 print("Middle half spans", iqr, "points")
+
+lower, upper = q1 - 1.5 * iqr, q3 + 1.5 * iqr
+new_score = 15
+print("Outside reference fences:", new_score < lower or new_score > upper)
