@@ -19,3 +19,9 @@ plt.close(fig)
 counts = [sum(low <= score < low + 10 for score in scores) for low in range(40, 100, 10)]
 assert counts == [1, 2, 3, 2, 1, 1]
 print("Counts per 10-point bin:", counts)
+
+fig, ax = plt.subplots()
+sns.histplot(x=scores, bins=[40, 60, 80, 100], ax=ax)
+ax.set(xlabel="Score", ylabel="Students", title="Same scores, wider bins")
+fig.savefig(folder / "score_histogram_wide.png")
+plt.close(fig)
