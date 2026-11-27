@@ -8,3 +8,6 @@ x_mean, y_mean = mean(hours), mean(scores)
 centered = [x - x_mean for x in hours]
 assert isclose(sum(centered), 0.0)
 print("Centered hours:", centered)
+
+cross_sum = sum(dx * (y - y_mean) for dx, y in zip(centered, scores, strict=True))
+print("Sum of centered cross-products:", cross_sum)
