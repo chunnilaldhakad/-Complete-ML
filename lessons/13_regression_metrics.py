@@ -14,3 +14,7 @@ print("Mean overprediction in score points:", bias)
 mae = mean(abs(e) for e in errors)
 assert mae == 3
 print("MAE in score points:", mae)
+
+mse = mean(e ** 2 for e in errors)
+assert mse == 14
+print("MSE in squared score points:", mse)
