@@ -9,3 +9,10 @@ order = list(range(len(records)))
 Random(42).shuffle(order)
 assert sorted(order) == list(range(len(records)))
 print("Row order:", order)
+
+split = len(order) * 3 // 4
+train_ids, test_ids = order[:split], order[split:]
+assert set(train_ids).isdisjoint(test_ids)
+train = [records[i] for i in train_ids]
+test = [records[i] for i in test_ids]
+print("Train/test sizes:", len(train), len(test))
