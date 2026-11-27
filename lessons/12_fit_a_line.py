@@ -11,3 +11,9 @@ print("Centered hours:", centered)
 
 cross_sum = sum(dx * (y - y_mean) for dx, y in zip(centered, scores, strict=True))
 print("Sum of centered cross-products:", cross_sum)
+
+spread = sum(dx ** 2 for dx in centered)
+if spread == 0:
+    raise ValueError("Slope requires at least two distinct input values")
+slope = cross_sum / spread
+print("Score points per additional hour:", slope)
