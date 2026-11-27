@@ -3,3 +3,7 @@ from statistics import mean, median, quantiles
 
 scores = [55, 60, 65, 70, 75, 80, 85]
 print("Mean and median:", mean(scores), median(scores))
+
+q1, q2, q3 = quantiles(scores, n=4, method="inclusive")
+assert (q1, q2, q3) == (62.5, 70, 77.5)
+print("Quartiles:", q1, q2, q3)
