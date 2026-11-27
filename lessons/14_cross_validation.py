@@ -14,3 +14,11 @@ def training_mean(held_out):
     return mean(training_scores)
 
 print("Training means by fold:", [training_mean(set(fold)) for fold in folds])
+
+predictions = {}
+for fold in folds:
+    prediction = training_mean(set(fold))
+    for i in fold:
+        predictions[i] = prediction
+assert set(predictions) == set(indices)
+print("Out-of-fold predictions in row order:", [predictions[i] for i in range(len(scores))])
