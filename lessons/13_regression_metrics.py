@@ -22,3 +22,7 @@ print("MSE in squared score points:", mse)
 rmse = sqrt(mse)
 assert rmse >= mae
 print("RMSE in score points:", round(rmse, 2))
+
+variation = sum((y - mean(actual)) ** 2 for y in actual)
+r_squared = 1 - sum(e ** 2 for e in errors) / variation if variation else None
+print("R squared:", r_squared)
