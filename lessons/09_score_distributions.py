@@ -31,3 +31,8 @@ sns.ecdfplot(x=scores, ax=ax)
 ax.set(xlabel="Score", ylabel="Fraction at or below score")
 fig.savefig(folder / "score_ecdf.png")
 plt.close(fig)
+
+threshold = 70
+fraction = sum(score <= threshold for score in scores) / len(scores)
+assert fraction == 0.7
+print(f"Fraction scoring {threshold} or below: {fraction:.0%}")
