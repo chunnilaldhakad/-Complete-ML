@@ -70,3 +70,7 @@ for label, indices in (("outside", outside), ("inside", sorted(set(order) - set(
     if indices:
         group_mae = mean(abs(records[i][1] - paired[i][1]) for i in indices)
         print(f"Line MAE {label} training range: {group_mae:.2f} ({len(indices)} rows)")
+
+final_intercept, final_slope = fit_line(records)
+new_hours = 5.5
+print(f"Full-data prediction for {new_hours} study hours: {final_intercept + final_slope * new_hours:.2f}")
