@@ -43,3 +43,8 @@ for i, (_, observed) in enumerate(records):
     # Positive values mean the line reduced the absolute prediction error.
     gains.append(abs(observed - baseline) - abs(observed - linear))
 print("Rows improved by the line:", sum(gain > 0 for gain in gains), "/", len(gains))
+
+baseline_mae = mean(abs(y - paired[i][0]) for i, (_, y) in enumerate(records))
+linear_mae = mean(abs(y - paired[i][1]) for i, (_, y) in enumerate(records))
+assert isclose(mean(gains), baseline_mae - linear_mae)
+print(f"Pooled MAE (score points): baseline {baseline_mae:.2f}, line {linear_mae:.2f}")
