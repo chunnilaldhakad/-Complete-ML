@@ -11,3 +11,17 @@ Random(42).shuffle(order)
 folds = [order[k::3] for k in range(3)]
 assert sorted(i for fold in folds for i in fold) == list(range(len(records)))
 print("Shared validation fold sizes:", [len(fold) for fold in folds])
+
+def fit_line(training):
+    """Return intercept and slope from the training rows of one fold."""
+    xs, ys = zip(*training)
+    x_mean, y_mean = mean(xs), mean(ys)
+    spread = sum((x - x_mean) ** 2 for x in xs)
+    if spread == 0:
+        return y_mean, 0.0
+    slope = sum((x - x_mean) * (y - y_mean) for x, y in training) / spread
+    return y_mean - slope * x_mean, slope
+
+
+assert fit_line([(2, 40), (2, 60)]) == (50, 0)
+assert fit_line([(1, 4), (3, 8)]) == (2, 2)
