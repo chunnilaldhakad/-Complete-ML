@@ -65,3 +65,8 @@ for fold in folds:
     low, high = min(training_hours), max(training_hours)
     outside.extend(i for i in fold if not low <= records[i][0] <= high)
 print("Held-out study hours requiring extrapolation:", sorted(records[i][0] for i in outside))
+
+for label, indices in (("outside", outside), ("inside", sorted(set(order) - set(outside)))):
+    if indices:
+        group_mae = mean(abs(records[i][1] - paired[i][1]) for i in indices)
+        print(f"Line MAE {label} training range: {group_mae:.2f} ({len(indices)} rows)")
