@@ -36,3 +36,10 @@ for held_out in folds:
         paired[i] = baseline, intercept + slope * hours
 
 assert len(paired) == len(records)
+
+gains = []
+for i, (_, observed) in enumerate(records):
+    baseline, linear = paired[i]
+    # Positive values mean the line reduced the absolute prediction error.
+    gains.append(abs(observed - baseline) - abs(observed - linear))
+print("Rows improved by the line:", sum(gain > 0 for gain in gains), "/", len(gains))
