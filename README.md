@@ -114,5 +114,11 @@ Run each example from the repository root with `python lessons/<filename>`.
 
 **Practice (step 69).** Change the largest prediction in lesson 13 from 86 to 92. Predict how MAE and RMSE will change, then update the expected metric values and run the example. Why does squaring an error make a large miss more influential?
 
-Next: evaluate a fitted linear model and a constant baseline on the same folds.
+## Lesson 15: comparing regressors on shared folds (steps 70–80)
+
+Run `python lessons/15_compare_regressors.py`. Each synthetic record receives two held-out predictions, one from a training-mean baseline and one from a fitted line. Compare their errors on the same rows before fitting the final line on all ten observations.
+
+**Practice.** For the 10-hour record, use the printed predictions and observed score to calculate each model's absolute error. Explain how the line can lower the overall MAE while missing this particular score by more than 26 points. Check whether 10 hours falls inside the training range for its fold.
+
+Next: move from predicting a numeric score to predicting a class and counting classification errors.
 
