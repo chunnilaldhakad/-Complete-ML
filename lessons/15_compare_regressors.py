@@ -25,3 +25,14 @@ def fit_line(training):
 
 assert fit_line([(2, 40), (2, 60)]) == (50, 0)
 assert fit_line([(1, 4), (3, 8)]) == (2, 2)
+
+paired = {}
+for held_out in folds:
+    training = [row for i, row in enumerate(records) if i not in held_out]
+    baseline = mean(y for _, y in training)
+    intercept, slope = fit_line(training)
+    for i in held_out:
+        hours, _ = records[i]
+        paired[i] = baseline, intercept + slope * hours
+
+assert len(paired) == len(records)
