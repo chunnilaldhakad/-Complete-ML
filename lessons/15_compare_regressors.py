@@ -58,3 +58,10 @@ worst = min(range(len(records)), key=gains.__getitem__)
 print("Smallest gain at (hours, score):", records[worst])
 print("Baseline and line predictions:", tuple(round(p, 2) for p in paired[worst]))
 print(f"Change in absolute error (baseline minus line): {gains[worst]:.2f}")
+
+outside = []
+for fold in folds:
+    training_hours = [x for i, (x, _) in enumerate(records) if i not in fold]
+    low, high = min(training_hours), max(training_hours)
+    outside.extend(i for i in fold if not low <= records[i][0] <= high)
+print("Held-out study hours requiring extrapolation:", sorted(records[i][0] for i in outside))
