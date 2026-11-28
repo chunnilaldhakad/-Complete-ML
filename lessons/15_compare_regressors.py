@@ -48,3 +48,8 @@ baseline_mae = mean(abs(y - paired[i][0]) for i, (_, y) in enumerate(records))
 linear_mae = mean(abs(y - paired[i][1]) for i, (_, y) in enumerate(records))
 assert isclose(mean(gains), baseline_mae - linear_mae)
 print(f"Pooled MAE (score points): baseline {baseline_mae:.2f}, line {linear_mae:.2f}")
+
+fold_gains = [mean(gains[i] for i in fold) for fold in folds]
+weighted_gain = sum(len(fold) * gain for fold, gain in zip(folds, fold_gains)) / len(records)
+assert isclose(weighted_gain, mean(gains))
+print("MAE reduction per fold:", [round(gain, 2) for gain in fold_gains])
