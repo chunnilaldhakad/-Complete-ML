@@ -53,3 +53,8 @@ fold_gains = [mean(gains[i] for i in fold) for fold in folds]
 weighted_gain = sum(len(fold) * gain for fold, gain in zip(folds, fold_gains)) / len(records)
 assert isclose(weighted_gain, mean(gains))
 print("MAE reduction per fold:", [round(gain, 2) for gain in fold_gains])
+
+worst = min(range(len(records)), key=gains.__getitem__)
+print("Smallest gain at (hours, score):", records[worst])
+print("Baseline and line predictions:", tuple(round(p, 2) for p in paired[worst]))
+print(f"Change in absolute error (baseline minus line): {gains[worst]:.2f}")
